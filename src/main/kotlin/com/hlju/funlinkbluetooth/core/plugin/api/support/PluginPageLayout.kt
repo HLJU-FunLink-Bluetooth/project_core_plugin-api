@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -23,7 +24,6 @@ import top.yukonga.miuix.kmp.basic.Card
 import top.yukonga.miuix.kmp.basic.HorizontalDivider
 import top.yukonga.miuix.kmp.basic.SmallTitle
 import top.yukonga.miuix.kmp.basic.Text
-import top.yukonga.miuix.kmp.shapes.SmoothRoundedCornerShape
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 
 @Composable
@@ -50,7 +50,7 @@ fun PluginPageLayout(
                 .weight(1f)
                 .fillMaxWidth()
                 .animateContentSize()
-                .clip(SmoothRoundedCornerShape(Corners.Outer)),
+                .clip(RoundedCornerShape(Corners.Outer)),
         ) {
             Column(
                 modifier = Modifier
@@ -104,7 +104,7 @@ fun PluginPageLayout(
             modifier = Modifier
                 .fillMaxWidth()
                 .animateContentSize()
-                .clip(SmoothRoundedCornerShape(Corners.Outer)),
+                .clip(RoundedCornerShape(Corners.Outer)),
         ) {
             Column(
                 modifier = Modifier.padding(

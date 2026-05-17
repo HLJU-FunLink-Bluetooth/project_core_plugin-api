@@ -28,7 +28,6 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose.base)
     implementation(libs.miuix.ui)
-    implementation(libs.miuix.shapes)
 
     testImplementation(libs.bundles.unit.test.base)
     testImplementation(libs.test.mockk)
