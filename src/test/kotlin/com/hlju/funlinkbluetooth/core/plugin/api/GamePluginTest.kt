@@ -79,7 +79,7 @@ class GamePluginTest {
         override val isConnected: Boolean = true
         override val maxBytesSize: Int = 32768
 
-        override fun sendPayload(endpointIds: List<String>, payload: FunLinkPayload): Long? = sentPayloadId
+        override fun sendPayload(endpointIds: List<String>, payload: FunLinkPayload): Long = sentPayloadId
 
         override fun cancelPayload(payloadId: Long) {
             canceledPayloadId = payloadId

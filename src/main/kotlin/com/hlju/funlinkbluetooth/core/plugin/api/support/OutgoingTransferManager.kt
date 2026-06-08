@@ -61,11 +61,4 @@ class OutgoingTransferManager {
         }
     }
 
-    fun cleanupOutgoing(payloadId: Long) {
-        outgoingTrackers.remove(payloadId)
-        progressCheckpoints.remove(payloadId)
-        if (lastOutgoingPayloadId.value == payloadId) {
-            lastOutgoingPayloadId.value = null
-        }
-    }
 }

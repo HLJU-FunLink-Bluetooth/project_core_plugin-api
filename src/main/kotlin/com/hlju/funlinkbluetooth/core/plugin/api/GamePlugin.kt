@@ -3,7 +3,6 @@ package com.hlju.funlinkbluetooth.core.plugin.api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import com.hlju.funlinkbluetooth.core.model.NearbyEndpointInfo
 import com.hlju.funlinkbluetooth.core.plugin.api.support.LogHelper
 
 abstract class GamePlugin(
@@ -24,15 +23,6 @@ abstract class GamePlugin(
     fun bind(bindings: PluginHostBindings) {
         _hostBindings = bindings
     }
-
-    val connectedEndpointIds: List<String>
-        get() = hostBindings.connectedEndpointIds
-
-    val connectedEndpoints: List<NearbyEndpointInfo>
-        get() = hostBindings.connectedEndpoints
-
-    val isConnected: Boolean
-        get() = hostBindings.isConnected
 
     fun canRunWithQuality(quality: Int): Boolean = quality >= requiredQuality
 

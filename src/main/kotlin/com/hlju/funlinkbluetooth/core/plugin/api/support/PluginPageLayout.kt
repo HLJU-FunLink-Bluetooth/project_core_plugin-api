@@ -10,16 +10,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import com.hlju.funlinkbluetooth.core.designsystem.token.Corners
 import com.hlju.funlinkbluetooth.core.designsystem.token.Spacing
+import com.hlju.funlinkbluetooth.core.designsystem.token.clipPageShape
 import top.yukonga.miuix.kmp.basic.Card
 import top.yukonga.miuix.kmp.basic.HorizontalDivider
 import top.yukonga.miuix.kmp.basic.SmallTitle
@@ -50,7 +48,7 @@ fun PluginPageLayout(
                 .weight(1f)
                 .fillMaxWidth()
                 .animateContentSize()
-                .clip(RoundedCornerShape(Corners.Outer)),
+                .clipPageShape(),
         ) {
             Column(
                 modifier = Modifier
@@ -104,7 +102,7 @@ fun PluginPageLayout(
             modifier = Modifier
                 .fillMaxWidth()
                 .animateContentSize()
-                .clip(RoundedCornerShape(Corners.Outer)),
+                .clipPageShape(),
         ) {
             Column(
                 modifier = Modifier.padding(
